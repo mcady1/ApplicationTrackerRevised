@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="#AAFA"
+        android:gravity="bottom">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleY="6"
+            android:scaleX=".9"
+            android:id="@+id/progress_bar"
+            android:orientation="vertical" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Daily Application Goal Progress"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:layout_marginLeft="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/name_label"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:text="Name: "
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:inputType="text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:layout_marginLeft="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:text="Type: "
+            android:textSize="25sp"
+            android:id="@+id/type_label"
+            />
+
+        <Spinner
+            android:id="@+id/type"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:layout_marginLeft="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/pay_label"
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:text="Pay: "
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/pay"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:inputType="number"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:layout_marginLeft="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:text="Location: "
+            android:textSize="25sp"
+            android:id="@+id/location_label"
+            />
+
+        <EditText
+            android:id="@+id/location"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:inputType="text"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:text="Due Date: "
+        android:textSize="25sp"
+        android:id="@+id/date_label"
+        android:layout_marginLeft="40dp"
+        />
+
+    <DatePicker
+        android:id="@+id/date"
+        android:datePickerMode="spinner"
+        android:calendarViewShown="false"
+        android:layout_height="0dp"
+        android:layout_weight="1.3"
+        android:layout_width="250dp"
+        android:textSize="5sp"
+        android:layout_marginLeft="40dp"
+        android:minDate="01/01/2024"
+        android:maxDate="12/31/2100"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:layout_marginLeft="40dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="match_parent"
+            android:text="Add. Notes: "
+            android:textSize="25sp"
+            android:id="@+id/notes_label"
+            />
+
+        <EditText
+            android:id="@+id/notes"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:inputType="text"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".7"
+        android:text="ADD APPLICATION"
+        android:textSize="25sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:id="@+id/read"
+        android:onClick="addApplication"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#AAA"
+        android:id="@+id/task_bar"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+
+        <Button
+            android:id="@+id/CP_calendar_navigation_button"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:drawable/ic_menu_my_calendar"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/CP_form_navigation_button"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:drawable/ic_menu_add"
+            android:backgroundTintMode="add" />
+
+        <Button
+            android:id="@+id/CP_leaderboard_navigation_button"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:drawable/ic_menu_sort_by_size"
+            android:backgroundTint="#FFFFFF"
+            app:strokeColor="#448AFF"
+            android:onClick="goToLeaderboard" />
+
+        <Button
+            android:id="@+id/CP_applications_navigation_button"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:drawable/ic_menu_mapmode" />
+
+    </LinearLayout>
+</LinearLayout>
